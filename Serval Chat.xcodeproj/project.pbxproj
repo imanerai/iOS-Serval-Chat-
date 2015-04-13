@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D73F69F1AC2B1530045DFA4 /* NearByListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73F69E1AC2B1530045DFA4 /* NearByListTableViewController.m */; };
+		2D73F6A21AC2B2B90045DFA4 /* NearBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73F6A11AC2B2B90045DFA4 /* NearBy.m */; };
 		2DBC08BC1ABF95540095FE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08BB1ABF95540095FE00 /* main.m */; };
 		2DBC08BF1ABF95540095FE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08BE1ABF95540095FE00 /* AppDelegate.m */; };
 		2DBC08C21ABF95540095FE00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08C11ABF95540095FE00 /* ViewController.m */; };
@@ -14,6 +16,23 @@
 		2DBC08C71ABF95540095FE00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08C61ABF95540095FE00 /* Images.xcassets */; };
 		2DBC08CA1ABF95540095FE00 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08C81ABF95540095FE00 /* LaunchScreen.xib */; };
 		2DBC08D61ABF95540095FE00 /* Serval_ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08D51ABF95540095FE00 /* Serval_ChatTests.m */; };
+		2DBC08E11ABFA4B20095FE00 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08E01ABFA4B20095FE00 /* Contact.m */; };
+		2DBC08E51ABFB67D0095FE00 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08E31ABFB67D0095FE00 /* ContactListTableViewController.m */; };
+		2DBC08E61ABFB67D0095FE00 /* ContactListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08E41ABFB67D0095FE00 /* ContactListTableViewController.xib */; };
+		2DBC08EA1ABFCF3F0095FE00 /* SetNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08E81ABFCF3F0095FE00 /* SetNameViewController.m */; };
+		2DBC08EB1ABFCF3F0095FE00 /* SetNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08E91ABFCF3F0095FE00 /* SetNameViewController.xib */; };
+		2DBC08EF1ABFD6D40095FE00 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08ED1ABFD6D40095FE00 /* MainScreenViewController.m */; };
+		2DBC08F01ABFD6D40095FE00 /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08EE1ABFD6D40095FE00 /* MainScreenViewController.xib */; };
+		2DBC08F41ABFDB110095FE00 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08F21ABFDB110095FE00 /* SettingViewController.m */; };
+		2DBC08F51ABFDB110095FE00 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBC08F31ABFDB110095FE00 /* SettingViewController.xib */; };
+		2DBC08F81ABFDDF00095FE00 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08F71ABFDDF00095FE00 /* Setting.m */; };
+		2DC009651AC4D98100E9C02A /* Blocked.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC009641AC4D98100E9C02A /* Blocked.m */; };
+		2DC009691AC4DA8300E9C02A /* BlockedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC009671AC4DA8300E9C02A /* BlockedListTableViewController.m */; };
+		2DC0096A1AC4DA8300E9C02A /* BlockedListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC009681AC4DA8300E9C02A /* BlockedListTableViewController.xib */; };
+		2DC0096D1AC4E37500E9C02A /* SetContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0096C1AC4E37500E9C02A /* SetContactViewController.m */; };
+		2DC44F2A1AC406C5004D887A /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC44F291AC406C5004D887A /* Request.m */; };
+		2DC44F2E1AC408C1004D887A /* RequestListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC44F2C1AC408C1004D887A /* RequestListTableViewController.m */; };
+		2DC44F2F1AC408C1004D887A /* RequestListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC44F2D1AC408C1004D887A /* RequestListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D73F69D1AC2B1530045DFA4 /* NearByListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByListTableViewController.h; sourceTree = "<group>"; };
+		2D73F69E1AC2B1530045DFA4 /* NearByListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByListTableViewController.m; sourceTree = "<group>"; };
+		2D73F6A01AC2B2B90045DFA4 /* NearBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearBy.h; sourceTree = "<group>"; };
+		2D73F6A11AC2B2B90045DFA4 /* NearBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearBy.m; sourceTree = "<group>"; };
 		2DBC08B61ABF95540095FE00 /* Serval Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Serval Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC08BA1ABF95540095FE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DBC08BB1ABF95540095FE00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +63,34 @@
 		2DBC08CF1ABF95540095FE00 /* Serval ChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Serval ChatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBC08D41ABF95540095FE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DBC08D51ABF95540095FE00 /* Serval_ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Serval_ChatTests.m; sourceTree = "<group>"; };
+		2DBC08DF1ABFA4B20095FE00 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		2DBC08E01ABFA4B20095FE00 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		2DBC08E21ABFB67D0095FE00 /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewController.h; sourceTree = "<group>"; };
+		2DBC08E31ABFB67D0095FE00 /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListTableViewController.m; sourceTree = "<group>"; };
+		2DBC08E41ABFB67D0095FE00 /* ContactListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListTableViewController.xib; sourceTree = "<group>"; };
+		2DBC08E71ABFCF3F0095FE00 /* SetNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNameViewController.h; sourceTree = "<group>"; };
+		2DBC08E81ABFCF3F0095FE00 /* SetNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNameViewController.m; sourceTree = "<group>"; };
+		2DBC08E91ABFCF3F0095FE00 /* SetNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetNameViewController.xib; sourceTree = "<group>"; };
+		2DBC08EC1ABFD6D40095FE00 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		2DBC08ED1ABFD6D40095FE00 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
+		2DBC08EE1ABFD6D40095FE00 /* MainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
+		2DBC08F11ABFDB110095FE00 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		2DBC08F21ABFDB110095FE00 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		2DBC08F31ABFDB110095FE00 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		2DBC08F61ABFDDF00095FE00 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		2DBC08F71ABFDDF00095FE00 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		2DC009631AC4D98100E9C02A /* Blocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blocked.h; sourceTree = "<group>"; };
+		2DC009641AC4D98100E9C02A /* Blocked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blocked.m; sourceTree = "<group>"; };
+		2DC009661AC4DA8300E9C02A /* BlockedListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockedListTableViewController.h; sourceTree = "<group>"; };
+		2DC009671AC4DA8300E9C02A /* BlockedListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockedListTableViewController.m; sourceTree = "<group>"; };
+		2DC009681AC4DA8300E9C02A /* BlockedListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlockedListTableViewController.xib; sourceTree = "<group>"; };
+		2DC0096B1AC4E37500E9C02A /* SetContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetContactViewController.h; sourceTree = "<group>"; };
+		2DC0096C1AC4E37500E9C02A /* SetContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetContactViewController.m; sourceTree = "<group>"; };
+		2DC44F281AC406C5004D887A /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		2DC44F291AC406C5004D887A /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		2DC44F2B1AC408C1004D887A /* RequestListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestListTableViewController.h; sourceTree = "<group>"; };
+		2DC44F2C1AC408C1004D887A /* RequestListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestListTableViewController.m; sourceTree = "<group>"; };
+		2DC44F2D1AC408C1004D887A /* RequestListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestListTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +137,38 @@
 				2DBC08C01ABF95540095FE00 /* ViewController.h */,
 				2DBC08C11ABF95540095FE00 /* ViewController.m */,
 				2DBC08C31ABF95540095FE00 /* Main.storyboard */,
+				2DC0096B1AC4E37500E9C02A /* SetContactViewController.h */,
+				2DC0096C1AC4E37500E9C02A /* SetContactViewController.m */,
+				2DC009661AC4DA8300E9C02A /* BlockedListTableViewController.h */,
+				2DC009671AC4DA8300E9C02A /* BlockedListTableViewController.m */,
+				2DC009681AC4DA8300E9C02A /* BlockedListTableViewController.xib */,
+				2DC44F2B1AC408C1004D887A /* RequestListTableViewController.h */,
+				2DC44F2C1AC408C1004D887A /* RequestListTableViewController.m */,
+				2DC009631AC4D98100E9C02A /* Blocked.h */,
+				2DC009641AC4D98100E9C02A /* Blocked.m */,
+				2DC44F2D1AC408C1004D887A /* RequestListTableViewController.xib */,
+				2D73F6A01AC2B2B90045DFA4 /* NearBy.h */,
+				2D73F6A11AC2B2B90045DFA4 /* NearBy.m */,
+				2D73F69D1AC2B1530045DFA4 /* NearByListTableViewController.h */,
+				2D73F69E1AC2B1530045DFA4 /* NearByListTableViewController.m */,
+				2DBC08F11ABFDB110095FE00 /* SettingViewController.h */,
+				2DBC08F21ABFDB110095FE00 /* SettingViewController.m */,
+				2DBC08F31ABFDB110095FE00 /* SettingViewController.xib */,
+				2DBC08EC1ABFD6D40095FE00 /* MainScreenViewController.h */,
+				2DBC08ED1ABFD6D40095FE00 /* MainScreenViewController.m */,
+				2DBC08EE1ABFD6D40095FE00 /* MainScreenViewController.xib */,
+				2DBC08E71ABFCF3F0095FE00 /* SetNameViewController.h */,
+				2DBC08E81ABFCF3F0095FE00 /* SetNameViewController.m */,
+				2DBC08E91ABFCF3F0095FE00 /* SetNameViewController.xib */,
+				2DBC08E21ABFB67D0095FE00 /* ContactListTableViewController.h */,
+				2DBC08E31ABFB67D0095FE00 /* ContactListTableViewController.m */,
+				2DC44F281AC406C5004D887A /* Request.h */,
+				2DC44F291AC406C5004D887A /* Request.m */,
+				2DBC08E41ABFB67D0095FE00 /* ContactListTableViewController.xib */,
+				2DBC08DF1ABFA4B20095FE00 /* Contact.h */,
+				2DBC08F61ABFDDF00095FE00 /* Setting.h */,
+				2DBC08F71ABFDDF00095FE00 /* Setting.m */,
+				2DBC08E01ABFA4B20095FE00 /* Contact.m */,
 				2DBC08C61ABF95540095FE00 /* Images.xcassets */,
 				2DBC08C81ABF95540095FE00 /* LaunchScreen.xib */,
 				2DBC08B91ABF95540095FE00 /* Supporting Files */,
@@ -199,9 +282,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBC08F51ABFDB110095FE00 /* SettingViewController.xib in Resources */,
 				2DBC08C51ABF95540095FE00 /* Main.storyboard in Resources */,
 				2DBC08CA1ABF95540095FE00 /* LaunchScreen.xib in Resources */,
+				2DC44F2F1AC408C1004D887A /* RequestListTableViewController.xib in Resources */,
+				2DBC08EB1ABFCF3F0095FE00 /* SetNameViewController.xib in Resources */,
+				2DBC08E61ABFB67D0095FE00 /* ContactListTableViewController.xib in Resources */,
+				2DC0096A1AC4DA8300E9C02A /* BlockedListTableViewController.xib in Resources */,
 				2DBC08C71ABF95540095FE00 /* Images.xcassets in Resources */,
+				2DBC08F01ABFD6D40095FE00 /* MainScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +308,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBC08EF1ABFD6D40095FE00 /* MainScreenViewController.m in Sources */,
+				2DC44F2E1AC408C1004D887A /* RequestListTableViewController.m in Sources */,
+				2DBC08E51ABFB67D0095FE00 /* ContactListTableViewController.m in Sources */,
+				2DBC08E11ABFA4B20095FE00 /* Contact.m in Sources */,
+				2DBC08EA1ABFCF3F0095FE00 /* SetNameViewController.m in Sources */,
+				2DC009691AC4DA8300E9C02A /* BlockedListTableViewController.m in Sources */,
+				2D73F69F1AC2B1530045DFA4 /* NearByListTableViewController.m in Sources */,
+				2DC44F2A1AC406C5004D887A /* Request.m in Sources */,
 				2DBC08C21ABF95540095FE00 /* ViewController.m in Sources */,
+				2D73F6A21AC2B2B90045DFA4 /* NearBy.m in Sources */,
 				2DBC08BF1ABF95540095FE00 /* AppDelegate.m in Sources */,
+				2DC009651AC4D98100E9C02A /* Blocked.m in Sources */,
+				2DC0096D1AC4E37500E9C02A /* SetContactViewController.m in Sources */,
 				2DBC08BC1ABF95540095FE00 /* main.m in Sources */,
+				2DBC08F41ABFDB110095FE00 /* SettingViewController.m in Sources */,
+				2DBC08F81ABFDDF00095FE00 /* Setting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Serval Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -356,8 +460,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Serval Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -414,6 +520,7 @@
 				2DBC08DB1ABF95540095FE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DBC08DC1ABF95540095FE00 /* Build configuration list for PBXNativeTarget "Serval ChatTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +529,7 @@
 				2DBC08DE1ABF95540095FE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
