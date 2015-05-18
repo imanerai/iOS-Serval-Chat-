@@ -6,7 +6,10 @@
 //  Copyright (c) 2015 Imane Rai. All rights reserved.
 //
 
+#import "ConversationViewController.h"
 #import "SetContactViewController.h"
+#import "NearByListViewController.h"
+#import "Contact.h"
 
 @interface SetContactViewController ()
 
@@ -16,31 +19,74 @@
 
 @synthesize nameLabel;
 @synthesize name;
-@synthesize tableView;
 
-- (void)viewDidLoad {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
-        [super viewDidLoad];
-        // Set the Label text with the selected recipe
-        nameLabel.text = name;
-    
+    // Set the Label text with the selected recipe
+    nameLabel.text = name;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
 }
 
-/*
-#pragma mark - Navigation
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.nameTextField resignFirstResponder];
+}
+
+- (IBAction)handleSaveClick:(id)sender {
+    [self performSegueWithIdentifier:@"toConversation" sender:self];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if([[segue identifier] isEqualToString:@"toConversation"]){
+        
+        ConversationViewController *dest = segue.destinationViewController;
+
+        dest.name = self.nameLabel.text;
+        
+        
+    }
 }
-*/
+
+    
+/*
+    self.nameLabel.text = self.nameTextField.text;
+    [self performSegueWithIdentifier:@"toContactList" sender:self];
+    //Contact *addedcontact;
+    //addedcontact = [[Contact alloc] init];
+    //addedcontact.contactName = self.nameTextField.text;
+    
+    //ContactListViewController *destViewController;
+   // destViewController= [ContactListViewController alloc];
+    
+    //[destViewController tableView:destViewController.tableView commitEditingStyle: UITableViewCellEditingStyleInsert ];
+}
+
+
+}*/
+
+
+
 
 @end
+

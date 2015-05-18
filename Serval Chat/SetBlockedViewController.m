@@ -1,21 +1,18 @@
 //
-//  SettingViewController.m
+//  SetBlockedViewController.m
 //  Serval Chat
 //
-//  Created by Imane Rai on 23/03/2015.
+//  Created by Imane Rai on 11/05/2015.
 //  Copyright (c) 2015 Imane Rai. All rights reserved.
 //
 
-#import "SettingViewController.h"
-#import "Setting.h"
-#import "Contact.h"
+#import "SetBlockedViewController.h"
 
-
-@interface SettingViewController ()
+@interface SetBlockedViewController ()
 
 @end
 
-@implementation SettingViewController
+@implementation SetBlockedViewController
 
 @synthesize nameLabel;
 @synthesize name;
@@ -29,9 +26,11 @@
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Set the Label text with the selected recipe
+    nameLabel.text = name;
 }
 
 - (void)viewDidUnload
@@ -45,21 +44,13 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)handleSaveClick:(id)sender {
+    self.nameLabel.text = self.nameTextField.text;
+    
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.nameTextField resignFirstResponder];
 }
-
-/*- (IBAction)handleSaveClick:(id)sender {
-    self.nameLabel.text = self.nameTextField.text;
-    Contact *addedcontact = [[Contact alloc] init];
-    addedcontact.contactName = self.nameTextField.text;
-    ContactListTableViewController *destViewController=segue.destinationViewController;
-   
-    
-    
-    [destViewController.commitEditingStyle: UITableViewCellEditingStyleInsert forRowAtIndexPath: destViewController.tableView indexPathForSelectedRow]
-    
-    //faire un segue et faire appel a comiteditingsyle de contactlisttableviewcontroller faire sa pr nearbylist */
 
 
 

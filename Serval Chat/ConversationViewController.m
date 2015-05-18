@@ -1,23 +1,25 @@
 //
-//  SetNameViewController.m
+//  ConversationViewController.m
 //  Serval Chat
 //
-//  Created by Imane Rai on 23/03/2015.
+//  Created by Imane Rai on 18/05/2015.
 //  Copyright (c) 2015 Imane Rai. All rights reserved.
 //
 
-#import "SetNameViewController.h"
-#import "Setting.h"
+#import "ConversationViewController.h"
 
-@interface SetNameViewController ()
+@interface ConversationViewController ()
 
 @end
 
-@implementation SetNameViewController
+@implementation ConversationViewController
+@synthesize nameLabel;
+@synthesize name;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    nameLabel.text = name;
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
