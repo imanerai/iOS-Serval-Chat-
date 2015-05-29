@@ -8,6 +8,7 @@
 
 #import "ConversationViewController.h"
 #import "SetContactViewController.h"
+#import "SetBlockedViewController.h"
 #import "NearByListViewController.h"
 #import "Contact.h"
 
@@ -53,16 +54,30 @@
 }
 
 - (IBAction)handleSaveClick:(id)sender {
-    [self performSegueWithIdentifier:@"toConversation" sender:self];
+    [self performSegueWithIdentifier:@"nearbyToConversation" sender:self];
 }
+
+
+- (IBAction)handleBlockClick:(id)sender {
+     [self performSegueWithIdentifier:@"nearbyToBlocked" sender:self];
+}
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if([[segue identifier] isEqualToString:@"toConversation"]){
+    if([[segue identifier] isEqualToString:@"nearbyToConversation"]){
         
         ConversationViewController *dest = segue.destinationViewController;
-
-        dest.name = self.nameLabel.text;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+        
+    }
+    if([[segue identifier] isEqualToString:@"nearbyToBlocked"]){
+        
+        SetBlockedViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
         
         
     }

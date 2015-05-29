@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3F25641B142B0500823033 /* SetUnknownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F25631B142B0500823033 /* SetUnknownViewController.m */; };
 		2D73F6A21AC2B2B90045DFA4 /* NearBy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D73F6A11AC2B2B90045DFA4 /* NearBy.m */; };
 		2D9C915C1B045C17009D3E5A /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C915B1B045C17009D3E5A /* ContactListViewController.m */; };
 		2DBC08BC1ABF95540095FE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC08BB1ABF95540095FE00 /* main.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D3F25621B142B0500823033 /* SetUnknownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUnknownViewController.h; sourceTree = "<group>"; };
+		2D3F25631B142B0500823033 /* SetUnknownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUnknownViewController.m; sourceTree = "<group>"; };
 		2D73F6A01AC2B2B90045DFA4 /* NearBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearBy.h; sourceTree = "<group>"; };
 		2D73F6A11AC2B2B90045DFA4 /* NearBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearBy.m; sourceTree = "<group>"; };
 		2D9C915A1B045C17009D3E5A /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				2DD3A40E1B0070E100E3C46C /* SetBlockedViewController.m */,
 				2DBC08BE1ABF95540095FE00 /* AppDelegate.m */,
 				2DBC08C31ABF95540095FE00 /* Main.storyboard */,
+				2D3F25621B142B0500823033 /* SetUnknownViewController.h */,
+				2D3F25631B142B0500823033 /* SetUnknownViewController.m */,
 				2DCD56121B09AF7F00F1C52C /* ConversationViewController.h */,
 				2DCD56131B09AF7F00F1C52C /* ConversationViewController.m */,
 				2D9C915A1B045C17009D3E5A /* ContactListViewController.h */,
@@ -317,6 +322,7 @@
 				2DBED5711AF357D200FE687B /* RequestListViewController.m in Sources */,
 				2DCD56141B09AF7F00F1C52C /* ConversationViewController.m in Sources */,
 				2DBC08F81ABFDDF00095FE00 /* Setting.m in Sources */,
+				2D3F25641B142B0500823033 /* SetUnknownViewController.m in Sources */,
 				2D9C915C1B045C17009D3E5A /* ContactListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

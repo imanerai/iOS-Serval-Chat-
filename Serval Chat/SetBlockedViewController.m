@@ -7,6 +7,7 @@
 //
 
 #import "SetBlockedViewController.h"
+#import "SetUnknownViewController.h"
 
 @interface SetBlockedViewController ()
 
@@ -43,19 +44,49 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-- (IBAction)handleSaveClick:(id)sender {
-    self.nameLabel.text = self.nameTextField.text;
-    
-}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.nameTextField resignFirstResponder];
+}
+
+- (IBAction)handeForgetClick:(id)sender {
+     [self performSegueWithIdentifier:@"blockedToUnknown" sender:self];
+}
+
+- (IBAction)handleUnblockedClick:(id)sender {
+    [self performSegueWithIdentifier:@"blockedToUnknown" sender:self];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([[segue identifier] isEqualToString:@"blockedToUnknown"]){
+        
+        SetUnknownViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+        
+    }
+
 }
 
 
 
 
 /*
+ 
+ - (IBAction)handleSaveClick:(id)sender {
+ [self performSegueWithIdentifier:@"nearbyToConversation" sender:self];
+ }
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ 
+ if([[segue identifier] isEqualToString:@"nearbyToConversation"]){
+ 
+ ConversationViewController *dest = segue.destinationViewController;
+ if ([self.nameTextField.text isEqualToString:@""])
+ {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+ 
+ 
+ }
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -9,12 +9,14 @@
 #import "ContactListViewController.h"
 #import "Contact.h"
 #import "SettingViewController.h"
+#import "ConversationViewController.h"
 
 @interface ContactListViewController ()
 
 @property (assign, nonatomic) BOOL longPressActive;
 
 @property NSMutableArray *contacts;
+@property NSIndexPath *indexPath;
 
 @end
 
@@ -111,21 +113,64 @@ self.contacts = [NSMutableArray arrayWithObjects:contact1, contact2, contact3, c
     static NSString *simpleTableIdentifier = @"ContactCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+ 
+        
+        //add longPressGestureRecognizer to your cell
+        UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                              initWithTarget:self action:@selector(handleLongPress:)];
+        //how long the press is for in seconds
+        lpgr.minimumPressDuration = 1.0; //seconds
+        [cell addGestureRecognizer:lpgr];
+    
     
     Contact *contact = [self.contacts objectAtIndex:indexPath.row];
     cell.textLabel.text=contact.contactName;
     return cell;
 }
 
+
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
+    
+    CGPoint p = [gestureRecognizer locationInView:self.tableView];
+    self.indexPath = [self.tableView indexPathForRowAtPoint:p];
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
+    {
+        [self performSegueWithIdentifier:@"contactToSetting"
+                                  sender:self];
+    }
+    
+
+}
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"contactToConversation"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ConversationViewController *destViewController = segue.destinationViewController;
+        Contact *contact= [self.contacts objectAtIndex:indexPath.row];
+        destViewController.name=contact.contactName;
+    }
+ if ([segue.identifier isEqualToString:@"contactToSetting"])
+    {
+        NSIndexPath *indexPath = self.indexPath;
+        SettingViewController *destViewController = segue.destinationViewController;
+        Contact *contact= [self.contacts objectAtIndex:indexPath.row];
+        destViewController.name=contact.contactName;
+    }
+}
+
+
+/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-
+*/
 
 
 
@@ -170,6 +215,8 @@ self.contacts = [NSMutableArray arrayWithObjects:contact1, contact2, contact3, c
     }
     
 }
+ 
+ 
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

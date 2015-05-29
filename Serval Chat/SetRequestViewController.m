@@ -7,6 +7,8 @@
 //
 
 #import "SetRequestViewController.h"
+#import "ConversationViewController.h"
+#import "SetBlockedViewController.h"
 
 @interface SetRequestViewController ()
 
@@ -43,5 +45,39 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.nameTextField resignFirstResponder];
+}
+
+- (IBAction)handleSaveClick:(id)sender {
+    [self performSegueWithIdentifier:@"requestToConversation" sender:self];
+}
+
+- (IBAction)handleBlockClick:(id)sender {
+    [self performSegueWithIdentifier:@"requestToBlocked" sender:self];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([[segue identifier] isEqualToString:@"requestToConversation"]){
+        
+        ConversationViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+    }
+    
+    if([[segue identifier] isEqualToString:@"requestToBlocked"]){
+        
+        SetBlockedViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+    }
+}
+
+
+
+
 
 @end

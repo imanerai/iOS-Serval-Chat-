@@ -11,10 +11,13 @@
 @interface SetRequestViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) NSString *name;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *blockButton;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

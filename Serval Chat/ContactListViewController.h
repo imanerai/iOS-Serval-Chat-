@@ -11,7 +11,7 @@
 @interface ContactListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-
+@property (strong, nonatomic) NSObject *managedObject;
 
 
 

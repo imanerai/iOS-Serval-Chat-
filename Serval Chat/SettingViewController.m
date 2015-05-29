@@ -7,6 +7,9 @@
 //
 
 #import "SettingViewController.h"
+#import "ConversationViewController.h"
+#import "SetBlockedViewController.h"
+#import "SetUnknownViewController.h"
 #import "Setting.h"
 #import "Contact.h"
 
@@ -19,6 +22,9 @@
 
 @synthesize nameLabel;
 @synthesize name;
+@synthesize saveButton;
+@synthesize forgetButton;
+@synthesize blockButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +37,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    nameLabel.text = name;
+    CALayer *btnLayer = [saveButton layer];
+    [btnLayer setMasksToBounds:YES];
+    [btnLayer setCornerRadius:5.0f];
+    CALayer *fbtnLayer = [forgetButton layer];
+    [fbtnLayer setMasksToBounds:YES];
+    [fbtnLayer setCornerRadius:5.0f];
+    CALayer *bbtnLayer = [blockButton layer];
+    [bbtnLayer setMasksToBounds:YES];
+    [bbtnLayer setCornerRadius:5.0f];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -45,9 +61,56 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+- (IBAction)handleBlockClick:(id)sender {
+    
+    [self performSegueWithIdentifier:@"contactToBlocked" sender:self];
+}
+
+
+- (IBAction)handleForgetClick:(id)sender {
+    
+    [self performSegueWithIdentifier:@"contactToUnknown" sender:self];
+}
+
+
+- (IBAction)handleSaveClick:(id)sender {
+
+        [self performSegueWithIdentifier:@"settingToConversation" sender:self];
+    
+}
+
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.nameTextField resignFirstResponder];
 }
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([[segue identifier] isEqualToString:@"settingToConversation"]){
+        
+        ConversationViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+    }
+    if([[segue identifier] isEqualToString:@"contactToBlocked"]){
+        
+        SetBlockedViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+    }
+    if([[segue identifier] isEqualToString:@"contactToUnknown"]){
+        
+        SetUnknownViewController *dest = segue.destinationViewController;
+        if ([self.nameTextField.text isEqualToString:@""])
+        {dest.name = self.name;} else {dest.name = self.nameTextField.text;}
+    }
+}
+
+@end
 
 /*- (IBAction)handleSaveClick:(id)sender {
     self.nameLabel.text = self.nameTextField.text;
@@ -74,4 +137,3 @@
 }
 */
 
-@end

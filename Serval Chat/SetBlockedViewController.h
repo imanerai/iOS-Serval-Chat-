@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *unblockButton;
 @property (nonatomic, strong) NSString *name;
+@property (weak, nonatomic) IBOutlet UIButton *forgetButton;
 
 
 @end
